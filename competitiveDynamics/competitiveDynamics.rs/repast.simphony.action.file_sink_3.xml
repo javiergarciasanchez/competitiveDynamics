@@ -1,0 +1,21 @@
+<repast.simphony.data2.engine.FileSinkDescriptor>
+  <name>IndivFirmData</name>
+  <dataSet>IndivFirmData</dataSet>
+  <delimiter>,</delimiter>
+  <format>TABULAR</format>
+  <sourceIds class="linked-hash-set">
+    <string>run</string>
+    <string>tick</string>
+    <string>toString</string>
+    <string>Profit</string>
+    <string>Born</string>
+    <string>MedCost</string>
+    <string>VarCost</string>
+    <string>age</string>
+    <string>quantity</string>
+    <string>marketShare</string>
+    <string>Return</string>
+  </sourceIds>
+  <fileName>IndivFirmData.csv</fileName>
+  <addTimeStamp>true</addTimeStamp>
+</repast.simphony.data2.engine.FileSinkDescriptor>
