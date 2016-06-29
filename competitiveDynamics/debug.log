@@ -158,3 +158,704 @@ Caused by: java.lang.NumberFormatException: For input string: "0,5"
 	at repast.simphony.parameter.ParametersParser.<init>(ParametersParser.java:46)
 	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:168)
 	... 22 more
+ERROR [AWT-EventQueue-0] 2016-06-28 12:37:27,155 repast.simphony.ui.RSApplication - Scenario Load Error
+repast.simphony.scenario.ScenarioLoadException: For input string: "0,5"
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:220)
+	at repast.simphony.ui.RSApplication.open(RSApplication.java:359)
+	at repast.simphony.ui.RSAppConfigurator.postWindowOpen(RSAppConfigurator.java:39)
+	at saf.core.ui.GUICreatorDelegate.runDisplay(GUICreatorDelegate.java:188)
+	at saf.core.ui.GUICreator$1.run(GUICreator.java:18)
+	at simphony.util.ThreadUtilities$Runner.run(ThreadUtilities.java:33)
+	at simphony.util.ThreadUtilities.runInEventThread(ThreadUtilities.java:47)
+	at saf.core.ui.GUICreator.runDisplay(GUICreator.java:16)
+	at repast.simphony.ui.RSUIPlugin$1.run(RSUIPlugin.java:104)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.NumberFormatException: For input string: "0,5"
+	at sun.misc.FloatingDecimal.readJavaFormatString(Unknown Source)
+	at sun.misc.FloatingDecimal.parseDouble(Unknown Source)
+	at java.lang.Double.parseDouble(Unknown Source)
+	at java.lang.Double.valueOf(Unknown Source)
+	at repast.simphony.parameter.StringConverterFactory$DoubleConverter.fromString(StringConverterFactory.java:102)
+	at repast.simphony.parameter.ParametersParser.startElement(ParametersParser.java:94)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
+	at javax.xml.parsers.SAXParser.parse(Unknown Source)
+	at repast.simphony.parameter.ParametersParser.<init>(ParametersParser.java:46)
+	at repast.simphony.scenario.ScenarioLoader.load(ScenarioLoader.java:168)
+	... 22 more
+ERROR [AWT-EventQueue-0] 2016-06-28 16:44:20,669 repast.simphony.ui.RSApplication - Error while initializing simulation
+repast.simphony.data2.DataException: Error creating MethodDataSource
+	at repast.simphony.data2.MethodDataSource.<init>(MethodDataSource.java:60)
+	at repast.simphony.data2.builder.AggregateDataSetBuilder.defineMethodDataSource(AggregateDataSetBuilder.java:84)
+	at repast.simphony.data2.engine.DataSetComponentControllerAction.createAggregateBuilder(DataSetComponentControllerAction.java:96)
+	at repast.simphony.data2.engine.DataSetComponentControllerAction.batchInitialize(DataSetComponentControllerAction.java:75)
+	at repast.simphony.engine.controller.DefaultController$1.visit(DefaultController.java:192)
+	at repast.simphony.engine.controller.DefaultController$1.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.batchInitialize(DefaultController.java:190)
+	at repast.simphony.engine.controller.DefaultController.batchInitialize(DefaultController.java:349)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:155)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: competitiveDynamics.Firm.Profit()
+	at java.lang.Class.getMethod(Unknown Source)
+	at repast.simphony.data2.MethodDataSource.<init>(MethodDataSource.java:43)
+	... 51 more
+ERROR [AWT-EventQueue-0] 2016-06-28 16:49:36,392 repast.simphony.ui.RSApplication - Error while initializing simulation
+repast.simphony.data2.DataException: Error creating MethodDataSource
+	at repast.simphony.data2.MethodDataSource.<init>(MethodDataSource.java:60)
+	at repast.simphony.data2.builder.AggregateDataSetBuilder.defineMethodDataSource(AggregateDataSetBuilder.java:84)
+	at repast.simphony.data2.engine.DataSetComponentControllerAction.createAggregateBuilder(DataSetComponentControllerAction.java:96)
+	at repast.simphony.data2.engine.DataSetComponentControllerAction.batchInitialize(DataSetComponentControllerAction.java:75)
+	at repast.simphony.engine.controller.DefaultController$1.visit(DefaultController.java:192)
+	at repast.simphony.engine.controller.DefaultController$1.visit(DefaultController.java:1)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+	at repast.simphony.engine.controller.DefaultController.batchInitialize(DefaultController.java:190)
+	at repast.simphony.engine.controller.DefaultController.batchInitialize(DefaultController.java:349)
+	at repast.simphony.ui.RSApplication.initSim(RSApplication.java:155)
+	at repast.simphony.ui.RSApplication.start(RSApplication.java:189)
+	at repast.simphony.ui.action.StartRun.actionPerformed(StartRun.java:17)
+	at javax.swing.AbstractButton.fireActionPerformed(Unknown Source)
+	at javax.swing.AbstractButton$Handler.actionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(Unknown Source)
+	at javax.swing.DefaultButtonModel.setPressed(Unknown Source)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(Unknown Source)
+	at java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$500(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: java.lang.NoSuchMethodException: competitiveDynamics.Firm.Profit()
+	at java.lang.Class.getMethod(Unknown Source)
+	at repast.simphony.data2.MethodDataSource.<init>(MethodDataSource.java:43)
+	... 51 more
+INFO  [AWT-EventQueue-0] 2016-06-28 17:11:34,349 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:11:34,536 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:11:51,359 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost8575667993607017397.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476 ...
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:11:51,399 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:11:51,401 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0821
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:11:51,401 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476\JGSanchez_localhost8575667993607017397.zip
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:11:52,940 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-16] 2016-06-28 17:12:09,400 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:12:09,396 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-16] 2016-06-28 17:12:09,401 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-16] 2016-06-28 17:12:09,401 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-16] 2016-06-28 17:12:09,402 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-16] 2016-06-28 17:12:09,403 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-16] 2016-06-28 17:12:09,403 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-16] 2016-06-28 17:12:09,404 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-16] 2016-06-28 17:12:09,555 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:12:09,551 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-16] 2016-06-28 17:12:09,555 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-16] 2016-06-28 17:12:09,555 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-16] 2016-06-28 17:12:09,555 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-16] 2016-06-28 17:12:09,556 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-16] 2016-06-28 17:12:09,566 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-16] 2016-06-28 17:12:09,566 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-16] 2016-06-28 17:12:09,566 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-16] 2016-06-28 17:12:09,567 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-16] 2016-06-28 17:12:09,567 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-16] 2016-06-28 17:12:09,567 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-16] 2016-06-28 17:12:09,567 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-16] 2016-06-28 17:12:09,567 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-16] 2016-06-28 17:12:09,568 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-3-thread-1] 2016-06-28 17:12:52,944 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,945 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0257
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,973 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,985 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476\instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,988 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144706476\instance_2
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,988 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,991 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0008
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:12:52,991 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1093
+INFO  [AWT-EventQueue-0] 2016-06-28 17:15:47,291 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:15:47,295 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:15:58,710 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost3981970120067916288.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903 ...
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:15:58,753 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:15:58,753 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0808
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:15:58,754 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903\JGSanchez_localhost3981970120067916288.zip
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:16:00,198 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-17] 2016-06-28 17:16:17,193 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:16:17,188 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-17] 2016-06-28 17:16:17,193 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-17] 2016-06-28 17:16:17,194 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-17] 2016-06-28 17:16:17,194 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-17] 2016-06-28 17:16:17,194 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-17] 2016-06-28 17:16:17,195 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-17] 2016-06-28 17:16:17,195 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-17] 2016-06-28 17:16:17,195 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-17] 2016-06-28 17:16:17,195 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-17] 2016-06-28 17:16:17,195 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-17] 2016-06-28 17:16:17,196 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-17] 2016-06-28 17:16:17,197 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-17] 2016-06-28 17:16:17,197 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-17] 2016-06-28 17:16:17,197 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-17] 2016-06-28 17:16:17,266 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:16:17,262 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-17] 2016-06-28 17:16:17,266 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-17] 2016-06-28 17:16:17,266 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-17] 2016-06-28 17:16:17,266 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-17] 2016-06-28 17:16:17,266 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-17] 2016-06-28 17:16:17,267 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-4-thread-1] 2016-06-28 17:17:00,198 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,199 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0241
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,208 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903
+WARN  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,211 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903\instance_1
+WARN  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,214 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467144953903\instance_2
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,214 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,217 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0003
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:17:00,217 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1063
+INFO  [AWT-EventQueue-0] 2016-06-28 17:27:57,900 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:27:58,289 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [AWT-EventQueue-0] 2016-06-28 17:28:09,600 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:28:09,600 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:28:20,944 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost7059033675711336783.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714 ...
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:28:20,991 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:28:20,991 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0879
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:28:20,991 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714\JGSanchez_localhost7059033675711336783.zip
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:28:22,648 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-6] 2016-06-28 17:28:38,961 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:28:38,958 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 17:28:38,962 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 17:28:38,962 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 17:28:38,963 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 17:28:38,963 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 17:28:38,979 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-6] 2016-06-28 17:28:39,079 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:28:39,076 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 17:28:39,081 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 17:28:39,082 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 17:28:39,082 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 17:28:39,082 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 17:28:39,083 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 17:28:39,083 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 17:28:39,083 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 17:28:39,084 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 17:28:39,085 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 17:28:39,085 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 17:28:39,087 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 17:28:39,088 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 17:28:39,088 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-3-thread-1] 2016-06-28 17:29:22,670 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,672 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0280
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,692 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714
+WARN  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,707 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714\instance_1
+WARN  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,707 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467145695714\instance_2
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,707 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,707 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0006
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:29:22,707 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1174
+INFO  [AWT-EventQueue-0] 2016-06-28 17:37:22,777 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:37:22,943 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:37:35,245 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost250745429528667068.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467146250396 ...
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:37:35,292 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:37:35,294 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0816
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:37:35,294 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467146250396\JGSanchez_localhost250745429528667068.zip
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:37:36,825 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-5] 2016-06-28 17:37:49,347 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:37:49,344 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-5] 2016-06-28 17:37:49,348 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-5] 2016-06-28 17:37:49,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-5] 2016-06-28 17:37:49,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-5] 2016-06-28 17:37:49,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-5] 2016-06-28 17:37:49,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-5] 2016-06-28 17:37:49,351 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-5] 2016-06-28 17:37:49,351 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-5] 2016-06-28 17:37:49,351 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-5] 2016-06-28 17:37:49,352 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-5] 2016-06-28 17:37:49,353 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-5] 2016-06-28 17:37:49,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-5] 2016-06-28 17:37:49,362 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-5] 2016-06-28 17:37:49,364 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-3-thread-1] 2016-06-28 17:38:36,830 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467146250396 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,831 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0256
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,854 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467146250396
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,870 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467146250396\instance_1
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,874 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,880 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0008
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:38:36,881 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1093
+INFO  [AWT-EventQueue-0] 2016-06-28 17:52:28,091 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:52:28,481 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:52:46,217 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost3063519628940436771.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842 ...
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:52:46,281 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:52:46,283 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,1240
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:52:46,284 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842\JGSanchez_localhost3063519628940436771.zip
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:52:48,412 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-6] 2016-06-28 17:53:09,423 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:53:09,418 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 17:53:09,424 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 17:53:09,424 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 17:53:09,424 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 17:53:09,424 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 17:53:09,424 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 17:53:09,425 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:53:09,606 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 17:53:09,610 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 17:53:09,611 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-3-thread-1] 2016-06-28 17:53:48,417 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,418 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0356
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,452 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,465 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842\instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,469 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147158842\instance_2
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,469 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,472 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0009
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 17:53:48,472 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1618
+INFO  [AWT-EventQueue-0] 2016-06-28 17:56:37,464 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 17:56:37,469 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:56:49,183 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost6310399309682649176.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147404244 ...
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:56:49,229 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:56:49,230 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0831
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:56:49,230 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147404244\JGSanchez_localhost6310399309682649176.zip
+INFO  [SwingWorker-pool-2-thread-2] 2016-06-28 17:56:50,782 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-8] 2016-06-28 17:57:07,702 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:57:07,695 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-8] 2016-06-28 17:57:07,703 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-8] 2016-06-28 17:57:07,703 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-8] 2016-06-28 17:57:07,703 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-8] 2016-06-28 17:57:07,703 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-8] 2016-06-28 17:57:07,704 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-8] 2016-06-28 17:57:07,704 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-8] 2016-06-28 17:57:07,704 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-8] 2016-06-28 17:57:07,704 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-8] 2016-06-28 17:57:07,704 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-8] 2016-06-28 17:57:07,705 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-8] 2016-06-28 17:57:07,705 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-8] 2016-06-28 17:57:07,705 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-8] 2016-06-28 17:57:07,705 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-8] 2016-06-28 17:57:07,924 repast.simphony.batch.ssh.LocalSession - ERROR [main] 17:57:07,921 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-8] 2016-06-28 17:57:07,925 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-8] 2016-06-28 17:57:07,925 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-8] 2016-06-28 17:57:07,925 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-8] 2016-06-28 17:57:07,925 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-8] 2016-06-28 17:57:07,925 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-8] 2016-06-28 17:57:07,926 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-8] 2016-06-28 17:57:07,927 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-8] 2016-06-28 17:57:07,927 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [AWT-EventQueue-0] 2016-06-28 18:01:01,304 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 18:01:01,388 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:01:14,475 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost5940632492157563010.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147669337 ...
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:01:14,516 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:01:14,517 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0863
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:01:14,517 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147669337\JGSanchez_localhost5940632492157563010.zip
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:01:16,095 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2016-06-28 18:01:33,297 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:01:33,292 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:01:33,297 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:01:33,298 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:01:33,299 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:01:33,299 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:01:33,299 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:01:33,299 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:01:33,299 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:01:33,344 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:01:33,348 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:01:33,349 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [AWT-EventQueue-0] 2016-06-28 18:02:37,086 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 18:02:37,188 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:02:51,725 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost6936959597770150394.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744 ...
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:02:51,766 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:02:51,767 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,1004
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:02:51,767 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744\JGSanchez_localhost6936959597770150394.zip
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:02:53,911 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2016-06-28 18:03:12,286 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:03:12,261 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:03:12,287 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:03:12,287 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:03:12,287 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:03:12,287 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:03:12,287 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:03:12,288 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:03:12,325 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:03:12,330 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:03:12,331 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-2-thread-1] 2016-06-28 18:03:53,922 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,923 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0359
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,950 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,962 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744\instance_1
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,965 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467147765744\instance_2
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,965 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,968 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0008
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:03:53,968 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1383
+INFO  [AWT-EventQueue-0] 2016-06-28 18:18:17,550 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 18:18:17,665 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:18:32,250 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost814214944689010043.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741 ...
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:18:32,295 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:18:32,296 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0926
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:18:32,297 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741\JGSanchez_localhost814214944689010043.zip
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:18:34,050 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2016-06-28 18:18:53,522 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:18:53,518 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:18:53,523 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:18:53,524 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-3] 2016-06-28 18:18:53,605 repast.simphony.batch.ssh.LocalSession - ERROR [main] 18:18:53,601 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 18:18:53,605 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 18:18:53,606 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 18:18:53,606 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 18:18:53,606 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 18:18:53,606 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 18:18:53,607 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 18:18:53,608 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 18:18:53,608 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-2-thread-1] 2016-06-28 18:19:34,067 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,068 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0295
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,090 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,105 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741\instance_1
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,109 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467148706741\instance_2
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,109 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,114 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0008
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 18:19:34,115 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1241
+INFO  [AWT-EventQueue-0] 2016-06-28 22:51:23,344 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 22:51:23,531 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:51:41,562 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost3948743740599428526.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484 ...
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:51:41,605 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:51:41,609 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0853
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:51:41,609 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484\JGSanchez_localhost3948743740599428526.zip
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:51:43,180 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-6] 2016-06-28 22:52:07,678 repast.simphony.batch.ssh.LocalSession - ERROR [main] 22:52:07,673 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 22:52:07,679 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 22:52:07,679 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 22:52:07,679 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 22:52:07,680 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 22:52:07,681 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 22:52:07,681 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 22:52:07,681 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - ERROR [main] 22:52:07,751 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-6] 2016-06-28 22:52:07,755 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-6] 2016-06-28 22:52:07,756 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-3-thread-1] 2016-06-28 22:52:43,185 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484 for DONE:  yes
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,185 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0263
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,249 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,293 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484\instance_1
+WARN  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,297 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165096484\instance_2
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,297 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,306 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0019
+INFO  [SwingWorker-pool-2-thread-1] 2016-06-28 22:52:43,306 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1148
+INFO  [AWT-EventQueue-0] 2016-06-28 23:05:48,719 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 23:05:48,851 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:06:06,111 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost1035683337474276257.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131 ...
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:06:06,144 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:06:06,144 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0835
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:06:06,144 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131\JGSanchez_localhost1035683337474276257.zip
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:06:07,931 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2016-06-28 23:06:23,133 repast.simphony.batch.ssh.LocalSession - ERROR [main] 23:06:23,133 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 23:06:23,133 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 23:06:23,137 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 23:06:23,138 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 23:06:23,138 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 23:06:23,138 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 23:06:23,138 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 23:06:23,138 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-3] 2016-06-28 23:06:23,202 repast.simphony.batch.ssh.LocalSession - ERROR [main] 23:06:23,186 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 23:06:23,202 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 23:06:23,202 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 23:06:23,202 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 23:06:23,202 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 23:06:23,203 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 23:06:23,204 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 23:06:23,204 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 23:06:23,204 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-2-thread-1] 2016-06-28 23:07:07,937 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,939 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0299
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,956 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,972 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131\instance_1
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,988 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467165961131\instance_2
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,988 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,988 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0008
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:07:07,988 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1148
+INFO  [AWT-EventQueue-0] 2016-06-28 23:12:46,753 repast.simphony.batch.gui.BatchConfigMediator - Writing batch run config file to: C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\output\config.props
+INFO  [AWT-EventQueue-0] 2016-06-28 23:12:46,869 repast.simphony.batch.gui.BatchConfigMediator - Unrolling batch parameter file:
+	C:\Users\jgsanchez\git\competitiveDynamics\competitiveDynamics\batch\batch_params.xml to
+	C:\Users\JGSANC~1\AppData\Local\Temp\unrolledParamFile.txt
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:12:58,859 repast.simphony.batch.ssh.LocalSession - 
+	Copying locally C:\Users\JGSANC~1\AppData\Local\Temp\JGSanchez_localhost8873477445687091433.zip to 
+C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922 ...
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:12:58,900 repast.simphony.batch.ssh.LocalSession - Copying Finished.
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:12:58,900 repast.simphony.batch.ssh.SessionsDriver - Initialization Time: 0,0830
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:12:58,900 repast.simphony.batch.ssh.LocalSession - Unzipping model C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922\JGSanchez_localhost8873477445687091433.zip
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:13:00,351 repast.simphony.batch.ssh.LocalSession - Running model on localhost ...
+INFO  [Thread-3] 2016-06-28 23:13:15,053 repast.simphony.batch.ssh.LocalSession - ERROR [main] 23:13:15,053 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 23:13:15,053 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 23:13:15,067 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 23:13:15,067 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 23:13:15,067 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 23:13:15,067 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 23:13:15,067 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 23:13:15,068 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 23:13:15,069 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [Thread-3] 2016-06-28 23:13:15,199 repast.simphony.batch.ssh.LocalSession - ERROR [main] 23:13:15,199 repast.simphony.batch.InstanceRunner - Error while running model
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - java.lang.NullPointerException
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.processContext(ScheduledMethodControllerAction.java:157)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.ScheduledMethodControllerAction.runInitialize(ScheduledMethodControllerAction.java:182)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:214)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController$2.visit(DefaultController.java:1)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:292)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraverals(NaryTree.java:295)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.util.collections.NaryTree.preOrderTraversal(NaryTree.java:288)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:212)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.engine.controller.DefaultController.runInitialize(DefaultController.java:383)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.OneRunBatchRunner.run(OneRunBatchRunner.java:101)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.run(InstanceRunner.java:195)
+INFO  [Thread-3] 2016-06-28 23:13:15,215 repast.simphony.batch.ssh.LocalSession - 	at repast.simphony.batch.InstanceRunner.main(InstanceRunner.java:217)
+INFO  [pool-2-thread-1] 2016-06-28 23:14:00,373 repast.simphony.batch.ssh.LocalDonePoller - Polled C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922 for DONE:  yes
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,376 repast.simphony.batch.ssh.SessionsDriver - Run Time: 1,0246
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,416 repast.simphony.batch.ssh.LocalSession - Finding output on localhost in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,428 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922\instance_1
+WARN  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,428 repast.simphony.batch.ssh.OutputFinder - No model output found matching glob:{**\\,}output\\IndivFirmData*.batch_param_map.csv in C:\Users\JGSANC~1\AppData\Local\Temp\simphony_model_1467166373922\instance_2
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,428 repast.simphony.batch.ssh.SessionsDriver - Aggregating output into C:/Users/jgsanchez/git/competitiveDynamics/competitiveDynamics/output
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,447 repast.simphony.batch.ssh.SessionsDriver - Get Output Time: 0,0012
+INFO  [SwingWorker-pool-1-thread-1] 2016-06-28 23:14:00,447 repast.simphony.batch.ssh.SessionsDriver - Finished. Elapsed Time: 1,1090

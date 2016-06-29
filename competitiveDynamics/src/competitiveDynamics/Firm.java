@@ -198,11 +198,11 @@ public class Firm {
 
 	public double netInvestment() {
 
-		double optimalMarkUp = ((Double) GetParameter("demandElasticity") + (1 - marketShare())
+		double optimalMarkUp = ((Double) GetParameter("demandElasticity") + (1 - getMarketShare())
 				* (Double) GetParameter("supplyElasticity"))
 				/ ((Double) GetParameter("demandElasticity")
-						+ (1 - marketShare())
-						* (Double) GetParameter("supplyElasticity") - marketShare());
+						+ (1 - getMarketShare())
+						* (Double) GetParameter("supplyElasticity") - getMarketShare());
 
 		// dejo Winter a un lado y pongo el máximo igual al mark up del
 		// substituto.
@@ -217,7 +217,7 @@ public class Firm {
 
 	}
 
-	public double marketShare() {
+	public double getMarketShare() {
 
 		// Market Share is calculated with the quantity remaining after the dead
 		// firms have exited the industry
@@ -225,23 +225,23 @@ public class Firm {
 
 	}
 
-	public double price() {
+	public double getPrice() {
 		return supplyManager.price;
 	}
 
-	public double quantity() {
+	public double getQuantity() {
 		return currentDecision.quantity;
 	}
 
-	public double Profit() {
+	public double getProfit() {
 		return currentState.profit;
 	}
 
-	public double performance() {
+	public double getPerformance() {
 		return currentState.performance;
 	}
 
-	public double rD() {
+	public double getRD() {
 		return currentDecision.rD;
 	}
 
@@ -253,7 +253,7 @@ public class Firm {
 		return currentState.firstUnitCost;
 	}
 
-	public double acumQuantity() {
+	public double getAcumQuantity() {
 		return currentState.acumQ;
 	}
 
@@ -291,7 +291,7 @@ public class Firm {
 
 	public double varCost = 0.0;
 
-	public double age() {
+	public double getAge() {
 		return GetTickCount() - born;
 	}
 }

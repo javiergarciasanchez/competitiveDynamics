@@ -20,7 +20,7 @@
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>AggProfit</id>
         <className>competitiveDynamics.Firm</className>
-        <methodName>Profit</methodName>
+        <methodName>getProfit</methodName>
         <aggType>MEAN</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
     </entry>
@@ -29,7 +29,7 @@
       <repast.simphony.data2.engine.MethodDataSourceDefinition>
         <id>AggQuantiy</id>
         <className>competitiveDynamics.Firm</className>
-        <methodName>quantity</methodName>
+        <methodName>getQuantity</methodName>
         <aggType>MEAN</aggType>
       </repast.simphony.data2.engine.MethodDataSourceDefinition>
     </entry>

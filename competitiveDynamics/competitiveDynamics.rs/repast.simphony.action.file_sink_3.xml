@@ -16,6 +16,6 @@
     <string>marketShare</string>
     <string>Return</string>
   </sourceIds>
-  <fileName>IndivFirmData.csv</fileName>
+  <fileName>./output/IndivFirmData.csv</fileName>
   <addTimeStamp>true</addTimeStamp>
 </repast.simphony.data2.engine.FileSinkDescriptor>

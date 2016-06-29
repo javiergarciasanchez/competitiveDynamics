@@ -12,14 +12,11 @@
  */
 package competitiveDynamics;
 
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import cern.jet.random.*;
 import repast.simphony.context.Context;
-import repast.simphony.engine.environment.*;
 import repast.simphony.engine.schedule.*;
 import repast.simphony.parameter.*;
 import repast.simphony.random.*;
@@ -28,11 +25,6 @@ import static java.lang.Math.*;
 import static repast.simphony.essentials.RepastEssentials.*;
 
 public class SupplyManager {
-
-	public static final String TEXT_DELIM = "\"";
-	public static final String FIELD_SEPARATOR = ",";
-	public static final String FILE_NAME = "C:\\Users\\jgsanchez\\Documents\\Local Workspace\\Sudden Stop\\output\\All Parameters.txt";
-	public static final String NEW_LINE = "\r\n";
 
 	private Context<Object> context;
 
@@ -179,43 +171,6 @@ public class SupplyManager {
 		IndexedIterable<Object> firms = context.getObjects(Firm.class);
 		for (Object f : firms)
 			((Firm) f).plan();
-
-	}
-
-	@ScheduledMethod(start = 1, interval = 1, shuffle = true)
-	public void saveParams() {
-
-		if (RunEnvironment.getInstance().isBatch()) {
-
-			FileWriter paramsFile;
-			try {
-				paramsFile = new FileWriter(FILE_NAME, true);
-
-				Parameters params = RunEnvironment.getInstance()
-						.getParameters();
-
-				Schema schema = params.getSchema();
-				for (String paramName : schema.parameterNames()) {
-					// write run number
-					paramsFile.write(((Integer) RunState.getInstance()
-							.getRunInfo().getRunNumber()).toString());
-
-					// write param Name
-					paramsFile.write(FIELD_SEPARATOR + TEXT_DELIM + paramName
-							+ TEXT_DELIM);
-
-					// writes param value
-					paramsFile.write(FIELD_SEPARATOR + GetParameter(paramName));
-
-					// new line
-					paramsFile.write(NEW_LINE);
-				}
-
-				paramsFile.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
 
 	}
 
